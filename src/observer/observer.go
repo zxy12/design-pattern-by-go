@@ -25,7 +25,6 @@ func (sub *SubjectImpl) Subscribe(observer Observer) {
 	sub.observers = append(sub.observers, observer)
 }
 
-
 // Notify 发布通知
 func (sub *SubjectImpl) Notify(msg string) {
 	for _, o := range sub.observers {
@@ -49,7 +48,7 @@ func (Observer2) Update(msg string) {
 	fmt.Printf("Observer2: %s\n", msg)
 }
 
-func main(){
+func _main() {
 	sub := &SubjectImpl{}
 	sub.Subscribe(&Observer1{})
 	sub.Subscribe(&Observer2{})

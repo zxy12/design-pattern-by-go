@@ -1,4 +1,4 @@
-package egger-mode
+package main
 
 // Singleton 饿汉式单例
 type Singleton struct{}
